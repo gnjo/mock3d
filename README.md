@@ -1,8 +1,8 @@
 ### history
 ```
-r001 coding labで簡易にランダム生成する。
-r010 coding mock3d.addFloor('')で構築するまで
-壁は抜けてもいい。マクロで動かす。
+r001 coded labで簡易にランダム生成する。
+r010 coded mock3d.addFloor('')で構築するまで
+r011 coding 壁は抜けてもいい。マクロで動かす。
 
 r020 coding mock3d.addEvent('')で2dと連携する。
 r021 coding タイトルを作る
