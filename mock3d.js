@@ -145,11 +145,13 @@ mock3d.SAVE={}
 mock3d.TEMP={}
 mock3d.UI={}
 mock3d.floors=[]
+mock3d.floorsobj=[]
 mock3d.addFloor=(str)=>{
  let mo=mock3d,time=performance.now()
  let xx=new FloorMaker(str,boxsize)
  mo.floors.push(xx.build())
  xx.makemap()////
+ mo.floorsobj.push(xx) ///////
  let maketime=(performance.now() - time)
  console.log( maketime.toFixed(1)+'ms' )
  //order.enterfloor(0)
