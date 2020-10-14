@@ -12,6 +12,7 @@ v1.2 logger
 v1.3 empty error
 v1.4 gob.getkey() 
 v2.0 polling
+v2.1 polling good erase console.log
 k>
 w>
 p>
@@ -275,7 +276,7 @@ function keycall(caller){
   let caller=_e('()=>'+_t(str))
   ,time=3
   ;
-  console.log(caller)
+  //console.log(caller)
   lop()
   function lop(){ 
    setTimeout(()=>caller()?o.next():lop(),time) 
