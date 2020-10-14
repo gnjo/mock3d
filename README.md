@@ -16,6 +16,15 @@ r042 coding 移動の整理、鍵の持ち方。
 
 ```
 
+### export
+```
+//生成しないものであれば、隠蔽できる。
+var o={} //生成されてしまう。
+function xyz(){} //export しない限り隠蔽。
+
+export {xyz}
+```
+
 ### build image
 ```
 script(src="https://gnjo.github.io/mock3d/gob.js")
