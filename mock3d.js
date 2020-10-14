@@ -149,6 +149,7 @@ mock3d.addFloor=(str)=>{
  let mo=mock3d,time=performance.now()
  let xx=new FloorMaker(str,boxsize)
  mo.floors.push(xx.build())
+ xx.makemap()////
  let maketime=(performance.now() - time)
  console.log( maketime.toFixed(1)+'ms' )
  //order.enterfloor(0)
