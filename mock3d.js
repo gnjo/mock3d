@@ -1,4 +1,10 @@
 //exportにはしない。
+/*history
+r010 pack
+r011 order.islightSmall
+
+*/
+
 //;(function (root){
 
 ////////////////////////////////////
@@ -89,6 +95,7 @@ var order={}
 order.lightOn=order.lighton=()=>{light.intensity=2.0;light.visible=true}
 order.lightSmall=order.lightsmall=()=>{light.intensity=0.5;light.visible=true}
 order.lightOff=order.lightoff=()=>{light.visible=false}
+order.islightSmall=order.islightsmall=()=>{return light.intensity===0.5}
 order.iconOn=order.iconon=()=>{ 
  let a=scene.children.filter(d=>/^F/.test(d.name)).map(d=>d.children)
  if(a.length===0)return 
