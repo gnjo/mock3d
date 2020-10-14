@@ -33,4 +33,22 @@ gob
 
 
 
+//ジャンプバックの仕方
+#start
+
+k>
+{1}>>>#aaa
+$wk=console.log('back')
+{1}>>>#start
+
+#aaa
+$00=0
+$addr=gob.jumpback //ジャンプしたライン行を退避
+#aaa.loop
+$00+=1
+{$00===100}>>>{$addr} //退避させたライン行へ
+w>10
+$wk=console.log($00)
+{1}>>>#aaa.loop
+
 ```
