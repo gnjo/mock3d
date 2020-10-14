@@ -15,6 +15,22 @@ r042 coding 移動の整理、鍵の持ち方。
 
 ```
 
+### build image
+```
+script(src="https://gnjo.github.io/mock3d/gob.js")
+script(src="https://gnjo.github.io/mock3d/mock3d.js")
+script(src=".../F00.js")
+script(src=".../F01.js")
+//main.js
+
+var mo=mock3d
+gob.add(`
+#start
+$wk=mock3d.run()
+{1}>>>#title
+`)
+```
+
 ### mock3d.js
 
 ```
