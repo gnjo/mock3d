@@ -29,7 +29,7 @@ gob
 .add(text1)
 .add(text2)
 .add(text3)
-.run('#start') //startaddr
+.done('#start') //startaddr
 
 
 
