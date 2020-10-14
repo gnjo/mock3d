@@ -3,7 +3,7 @@
 r001 coded labで簡易にランダム生成する。
 r010 coded mock3d.addFloor('')で構築するまで
 r011 coded 壁は抜けてもいい。マクロで動かす。
-r012 coding Bボタンで背景を暗くする。切り替える。
+r012 coded Bボタンで背景を暗くする。切り替える。
 
 r020 coding mock3d.addEvent('')で2dと連携する。
 r021 coding タイトルを作る
