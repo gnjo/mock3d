@@ -43,7 +43,7 @@ var vlib={}
 })(this); 
 */
 /////////////////////////////////////////
-;(function(root){
+//;(function(root){
   //MRK JMP FNC EVM EVL  
  let ma={
   group:/#.*|{.*}>>>(#.*|{.*}|\d.*)|([\w\d].*)>.*|{{{js([\s\S]*?)}}}|{{{([\s\S]*?)}}}|\$.*=.*/g
@@ -70,12 +70,12 @@ var vlib={}
   return {jumps:jumps,lists:lists}
  }
  ;
- root.lexs=lexs
-})(this);
+// root.lexs=lexs
+//})(this);
 /////////////////////////////////////////
-;(function(root){
- let lexs=root.lexs
- function entry(){
+//;(function(root){
+// let lexs=root.lexs
+ function reader(){
   let o={}
   o.lists=[], o.jumps={}, o.line=0, o.block=0, o.end=0, o.lexs=lexs
   ;
@@ -103,9 +103,9 @@ var vlib={}
   o.isEnd=o.isend
   return o;
  }
- root.reader=entry;
-})(this);
-;(function(root){
+// root.reader=entry;
+//})(this);
+//;(function(root){
  
  String.prototype.trim2 = function () { //big space is not
    return this.replace(/^[ \r\n\t\uFEFF\xA0]+|[ \t\r\n\uFEFF\xA0]+$/g, '');
@@ -125,6 +125,7 @@ var vlib={}
  function _t2(obj){return obj.replace(/{{{|}}}/g,'').trim2()/*.trim()*/}
  function _t3(obj){return obj.replace(/{{{js|}}}/g,'').trim2()/*.trim()*/} //v1.1
 
+/*
  root._c=_c
  root._=_
  root._e=_e
@@ -134,10 +135,11 @@ var vlib={}
  root._t2=_t2 
  root._t3=_t3
 })(this);
+*/
 //////////////////////////////////////////////
-;(function(root){
+//;(function(root){
   //MRK JMP FNC EVM EVL 
- let vlib=root.vlib 
+ let vlib={} //root.vlib 
  vlib.CMM=(str,o)=>{return o.next()}
  vlib.EVL=(str,o)=>{return /*o.v['$$$'] =*/ _(_t(str)),o.next()} //v0.4
  vlib.PJS=(str,o)=>{return /*o.v['$$$'] =*/ _e2(_t3(str)),o.next()} //v1.1 //v1.5 _e> _e2
@@ -169,11 +171,11 @@ var vlib={}
   //if(o.v['$'+cmd]===undefined) o.v['$'+cmd]=void 0 //create valiable
   return vlib[cmd](_str,o) //call next() is top function
  }
- root.vlib=vlib
-})(this);
+// root.vlib=vlib
+//})(this);
 //////////////////////////////////  
-;(function(root){
- let vlib=root.vlib,fps=root.fps
+//;(function(root){
+// let vlib=root.vlib,fps=root.fps
   ;
   let o=reader();
   o.keyset='w,a,s,d,j,k,i,l,u,o'
@@ -227,12 +229,12 @@ var vlib={}
    return o;
   } 
   o.run=o.done
-  ;
- root.gob=o;
-})(this);
+//  ;
+// root.gob=o;
+//})(this);
 
 
-;(function(root){ 
+//;(function(root){ 
   var keys={}
 function keyconfig(str){
  //$keyconf={37:'<',39:'>',38:'^',40:'v',70:'A',68:'B',65:'X',83:'Y',82:'R',69:'L'}
@@ -251,12 +253,12 @@ function keycall(caller){
  if(k==='X')del();
 })*/
  keyconfig('w,a,s,d,j,k,i,l,u,o');//initialize
- root.keyconfig=keyconfig
- root.keycall=keycall
-})(this); 
+// root.keyconfig=keyconfig
+// root.keycall=keycall
+//})(this); 
 
-;(function(root){
-  let vlib=root.vlib||{}
+//;(function(root){
+// let vlib=root.vlib||{}
   vlib.k=(str,o)=>{
   o.v['$k']=void 0  //easy picking
   keycall((k,del)=>{ 
@@ -282,10 +284,10 @@ function keycall(caller){
   }
 }
  
- root.vlib=vlib
-})(this);
+// root.vlib=vlib
+//})(this);
 
-;(function(root){
+//;(function(root){
 let fn={}
  fn.toSmall=(str)=>{
   return str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
@@ -297,12 +299,12 @@ let fn={}
    return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
   });
  }
- root.toSmall=fn.toSmall;
- root.toBig=fn.toBig
-})(this);
+// root.toSmall=fn.toSmall;
+// root.toBig=fn.toBig
+//})(this);
 
-;(function(root){
- function entry(){
+//;(function(root){
+ function logger(){
   var o={}
   ;
   o.max=100,o.buf=[],o.log=[];
@@ -317,8 +319,10 @@ let fn={}
   }
   return o;
  }
- root.logger=entry
-})(this);
+// root.logger=entry
+//})(this);
+
+export{logger,o as gob}
 
 /*
 gob.add(`
