@@ -20,3 +20,17 @@ mock3d.save('json') //return jsonString
 
 
 ```
+
+```
+//gob.js
+//goblin macro
+
+gob
+.add(text1)
+.add(text2)
+.add(text3)
+.run('#start') //startaddr
+
+
+
+```
