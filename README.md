@@ -1,5 +1,6 @@
 ### history
 ```
+r001 coding labで簡易にランダム生成する。
 r010 coding mock3d.addFloor('')で構築するまで
 壁は抜けてもいい。マクロで動かす。
 
