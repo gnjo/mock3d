@@ -86,3 +86,23 @@ w>10
 .done('#start') //startaddr
 
 ```
+
+### note
+```
+//FloorMakerはフロア単体だが、複数のフロアを管理するために、managerを作る。
+//マネジャーのインターフェイスは少なくする。
+//footstepさえあればいい。
+//['F00X00Y00.E',...]
+
+floorManager
+.make(str)
+.update(ary) //ary or 'F00X00Y00.E' //if first load is ary
+.getfloor(number,objflg) 
+.getmap(number,fullflg) //0...99 or 'F00X00Y00.E'
+
+
+
+```
+
+
+
