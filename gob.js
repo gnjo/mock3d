@@ -320,6 +320,8 @@ let fn={}
  root.logger=entry
 })(this);
 
+export{gob}
+
 /*
 gob.add(`
 #aaa
