@@ -20,6 +20,7 @@ https://codepen.io/gnjo/pen/JjKYxOa?editors=0010
 */
 const CR="\n",HIDE=void 0
 var vlib={}
+/*
 ;(function(root){
  var fps=60,ms=50,count=0,callary=[],running=false,stopflg=false,cl=void 0
  ;
@@ -40,7 +41,7 @@ var vlib={}
  root.fpsclear=fpsclear
  root.getcount=getcount
 })(this); 
-
+*/
 /////////////////////////////////////////
 ;(function(root){
   //MRK JMP FNC EVM EVL  
@@ -201,6 +202,7 @@ var vlib={}
    else setTimeout(o.lop,1000/o._fps) //sppedup
    //if(list&&debugflg)console.log(list)
   }
+  /*
   o.run= function entry(text,userlib,caller,_fps){
    o.caller=caller||function(o,k,v){return}
    o.cmds=Object.assign(vlib,userlib)   
@@ -215,6 +217,7 @@ var vlib={}
    o.lop()// speedup
    return o;
   }
+  */
   o.addMacro=o.addr //meaning
   o.done=function entry(addr){
    o.cmds=vlib   
@@ -223,6 +226,7 @@ var vlib={}
    o.lop()
    return o;
   } 
+  o.run=o.done
   ;
  root.gob=o;
 })(this);
