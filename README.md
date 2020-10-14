@@ -1,3 +1,20 @@
+### history
+```
+r010 coding mock3d.addFloor('')で構築するまで
+壁は抜けてもいい。マクロで動かす。
+
+r020 coding mock3d.addEvent('')で2dと連携する。
+r021 coding タイトルを作る
+r022 coding 拠点をつくり、タイトルと拠点の移動
+r023 coding 簡単な画面をつくり、迷宮侵入と拠点へ戻るを行う。
+
+r030 coding 2dマップの表示。
+r040 coding 壁や移動禁止の整理
+r041 coding フロアを二つ作る。
+r042 coding 移動の整理、鍵の持ち方。
+
+```
+
 ### mock3d.js
 
 ```
